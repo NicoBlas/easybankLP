@@ -1,0 +1,47 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 51px;
+    width: 100%;
+
+    padding: 0 3rem;
+}
+
+
+
+.navbar__links{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__logo{
+    cursor: pointer;
+    margin-left: 7rem;
+}
+
+.navbar__links p,
+.navbar__links a{
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 16px;
+    text-decoration: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.navbar__links p :hover{
+    border-bottom: 3px solid #00e792;
+    
+}
+
+.navbar__invite{
+    margin-right: 7rem;
+}
+
+
+
