@@ -66,7 +66,7 @@
     flex-direction: column;
     
     text-align: end;
-    background: var(--color-footer);
+    background: #fff;
     padding: 2rem;
     position: absolute;
     right: 0;
@@ -100,8 +100,6 @@
 @media screen and (max-width: 550px) {
     .navbar{
         width: 100%;
-        
-
     }
 
     .navbar__links{

@@ -1,8 +1,20 @@
 import React from 'react'
+import "./features.css"
 
-const Features = () => {
+
+const Features = (props) => {
   return (
-    <div>features</div>
+    <div className='featuresList__container__article'>
+      <div className='featuresList__container__article-image'>  
+        <img src={props.icon} alt="" />
+      </div>      
+      <div className='featuresList__container__article-content'>
+        <h3>{props.title}</h3>
+        <p>{props.parraf}</p>
+
+      </div>
+
+    </div>
   )
 }
 

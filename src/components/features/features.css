@@ -1,0 +1,35 @@
+.featuresList__container__article{
+    width: 20%;
+    min-width: 200px;
+    height: 350px;
+   
+}
+
+.featuresList__container__article-image{
+    width: 100%;
+    height: 30%;
+    margin-bottom: 0;
+}
+
+.featuresList__container__article-content{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+      
+}
+
+.featuresList__container__article-content h3{
+    font-family: var(--font-family);
+    font-size: 22px;
+    color:hsl(233, 26%, 24%);
+
+}
+
+.featuresList__container__article-content p{
+    font-family: var(--font-family);
+    font-size: 15px;
+    color:hsl(233, 8%, 62%);  
+    line-height: 23px;     
+}

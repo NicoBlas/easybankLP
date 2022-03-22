@@ -57,14 +57,63 @@
 
 
 @media screen and (max-width: 550px) {
+
+    .header{
+        width: 100%;
+        padding: 0;
+        margin:0;
+        display: flex;
+        flex-direction: column-reverse;
+        
+    }
     .header__image-phone{
-        position: absolute;
-        top:-10%;
-        right: -8%;
+        left:12%;
         z-index: 10;
         width: 80%;
         height: 400px;
+        position: absolute;
+
     }
+
+
+
+    .header__info{
+        width: 80%;
+        font-family: var(--font-family);
+        margin-top: 0;
+        padding-left: 0%;
+        text-align: center;
+        
+    }
+
+    .header__info p{
+        color:hsl(233, 8%, 62%);
+        font-size: 15px;
+
+    
+    
+    }
+    
+    .header__info h1{
+        color:hsl(233, 26%, 24%);
+        font-size: 25px;
+
+    
+    }
+
+    .header__image-cuadrados-mini{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .header__image-cuadrados{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
 
     
 }
