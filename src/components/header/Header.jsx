@@ -19,18 +19,11 @@ export const Header = () => {
         <p>{dataHeader.value}</p>
         <RequestInvite className="header__info-RI" />
       </div>
-
-
-
       <div className='header__image'>
         <div className='image-container'>
           <img className='header__image-phone' src={svgPhone} alt="" />
         </div>
-        
-      </div>
-
-
-      
+      </div> 
     </div>
   )
 }
