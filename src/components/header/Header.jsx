@@ -23,7 +23,10 @@ export const Header = () => {
 
 
       <div className='header__image'>
-        <img className='header__image-phone' src={svgPhone} alt="" />
+        <div className='image-container'>
+          <img className='header__image-phone' src={svgPhone} alt="" />
+        </div>
+        
       </div>
 
 
