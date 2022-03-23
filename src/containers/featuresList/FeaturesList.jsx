@@ -35,7 +35,7 @@ const articleInfo = [
 
 const featuresList = () => {
   return (
-    <div className='featuresList'>
+    <div className='featuresList' id="about">
       <div className='featuresList__title'>
         <h2>Why choose Easybank?</h2>
         <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>

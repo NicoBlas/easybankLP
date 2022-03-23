@@ -33,3 +33,17 @@
     color:hsl(233, 8%, 62%);  
     line-height: 23px;     
 }
+
+
+@media screen and (max-width: 550px) {
+    .featuresList__container__article{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+}

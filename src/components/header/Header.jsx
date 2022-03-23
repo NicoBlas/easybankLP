@@ -25,16 +25,9 @@ export const Header = () => {
       <div className='header__image'>
         <img className='header__image-phone' src={svgPhone} alt="" />
       </div>
-      <div>
-        <picture>
-          <source
-            srcSet={svgCuadrados}
-            media="(min-width:600px)"
-            className='header__image-cuadrados-mini'
-          />
-          <img className="header__image-cuadrados" src={svgCuadradosMini} alt="" />
-        </picture>
-      </div>
+
+
+      
     </div>
   )
 }

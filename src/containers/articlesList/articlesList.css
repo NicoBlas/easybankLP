@@ -1,0 +1,41 @@
+.articlesList{
+    display: flex;
+    flex-direction: column;
+    padding-left: 9rem;
+    padding-right: 3rem;
+    background: hsl(0, 0%, 98%);
+
+}
+
+.articlesList__title{
+    color:hsl(233, 26%, 24%) ;
+    font-size: 45px;
+    margin-top: 4rem;
+}
+
+.articlesList__content{
+    display: flex;
+    flex-direction: row;
+    
+
+}
+
+@media screen and (max-width: 550px) {
+    .articlesList{
+        display: flex;
+        flex-direction: column;
+        padding: 0 3rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .articlesList__content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+}
+
+
+
