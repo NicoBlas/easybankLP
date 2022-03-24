@@ -81,7 +81,12 @@
 
 
 
+@media screen and (max-width: 950px){
+    .header__image-phone{
+        display: none;
+    }
 
+}
 
 
 
@@ -107,7 +112,7 @@
         z-index: 10;
         width: 100%;
         position: relative;
-        
+        display: block;
 
     }
 
@@ -148,6 +153,8 @@
         top: 0;
         right: 0;
     }
+
+
 
 
 
