@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Navbar, Article, Footer, Header, Features} from "./components/allComponents"
+import {Navbar, Footer, Header} from "./components/allComponents"
 import {FeaturesList, ArticlesList} from "./containers/allContainers"
 
 

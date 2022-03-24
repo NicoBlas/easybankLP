@@ -10,10 +10,11 @@
     font-weight: 700;
     background:linear-gradient(90deg, rgba(23,190,0,1) 1%, rgba(0,227,216,1) 100%); 
     cursor: pointer;
+
 }
 
 .buton :hover{
-    background: var(--background-gradient);
+    background: var(--background-gradient); 
 }
 
 @media screen and (max-width: 550px) {
