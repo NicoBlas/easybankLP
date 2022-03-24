@@ -16,7 +16,7 @@
 .articlesList__content{
     display: flex;
     flex-direction: row;
-    height: 500px;
+    margin-bottom: 12rem;
     
 
 }
@@ -33,6 +33,7 @@
     .articlesList__content{
         display: flex;
         flex-direction: column;
+        margin-bottom: 2rem;
         
     }
     

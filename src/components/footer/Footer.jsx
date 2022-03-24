@@ -41,7 +41,9 @@ const Footer = () => {
       </div>
 
       <div className='footer__ending'>
+        <div className='footer__ending-b'>
         <RequesInvite />
+        </div>
         <p>© Easybank. All Rights Reserved</p>
       </div>
 
