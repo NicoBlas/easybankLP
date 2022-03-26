@@ -1,14 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./formContact.css"
-import { Formik } from 'formik'
+import { ErrorMessage, Formik } from 'formik'
 
 const FormContact = () => {
+
+    const [formularioEnviado, SetformularioEnviado] = useState(false)
 
     return (
         <div className='formContactContainer'>
             <Formik
-                onSubmit={ (valores) => {
+                onSubmit={ (valores, {resetForm}) => {     // Desde aca podemos enviar estos valores a una BDD o API o lo q sea.
+                    resetForm()    // resetea el form
                     console.log(valores)
+                    SetformularioEnviado(true)
+                    setTimeout(() => SetformularioEnviado(false),5000)
                 }}
                 initialValues = {{
                     nombre: "",
@@ -18,23 +23,31 @@ const FormContact = () => {
                 validate = { (values) =>{
                     
                     let errors = {}
-
+                    //validacion nombre
                     if(!values.nombre){
-                        errors.nombre = ("Ingresar un nombre")
+                        errors.nombre = ("Please enter a name")
 
                     }
-
+                    //validacion correo
+                    let validEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
                     if(!values.correo){
-                        errors.correo = ("Ingresar un correo")
+                        errors.correo = ("Please enter a email")
+                    }else if(!validEmail.test(values.correo)){
+                        errors.correo = "Please enter a valid email"
                     }
 
                     return errors
 
                     }
                 } 
-          
+        
             >
-                { ({values, handleSubmit, handleChange, handleBlur, errors})=>(
+                {/* values = acceder a valores y podes poner valores por defecto. 
+                habdleChange = permite que el usuario escriba en el form.  
+                errors = accede a los errores. 
+                touched = sabe si el usuario toco el campo
+                onBlur = sirve para q toched funcione, con esto formik sabe a que campos entraste. En un principio creo que evita que se muestren errores hasta q el usuario termine de escribir y toque en otro lado*/}
+                { ({values, handleSubmit, handleChange, handleBlur, errors, touched})=>(
                     <form action='' className='formulario' onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor='nombre'>Name</label>
@@ -47,7 +60,7 @@ const FormContact = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur} 
                             />
-                            {errors.nombre && <div className='error'>{errors.nombre} </div> }
+                            {touched.nombre && errors.nombre && <div className='error'>{errors.nombre} </div> }
 
                         </div>
 
@@ -62,10 +75,12 @@ const FormContact = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}   
                             />
-                            {errors.correo && <div className='error'>{errors.correo} </div> }
+                            {touched.correo && errors.correo && <div className='error'>{errors.correo} </div> }
                         </div>
 
-                        <button type='submit'>Request Invite</button>
+                        <button type='submit'>Send</button>
+
+                        {formularioEnviado && <p className='exito'> You will recive an email soon !</p>}
                     </form>
               ) }  
             </Formik>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./footer.css"
 import logo from "../../assets/logo.svg"
+import {Link} from "react-router-dom"
 import facebookIcon from "../../assets/icon-facebook.svg"
 import youtubeIcon from "../../assets/icon-youtube.svg"
 import twitterIcon from "../../assets/icon-twitter.svg"
@@ -28,15 +29,15 @@ const Footer = () => {
 
       <div className='footer__links'>
         <div className='footer__links-1'>
-          <p><a href='#home'>About Us</a></p>
-          <p><a href='#about'>Contact</a></p>
+          <p><a href='#about'>About Us</a></p>
+          <p><Link to='/contact'>Contact</Link></p>
           <p><a href='#blog'>Blog</a></p>
         </div>
 
         <div className='footer__links-2'>
-          <p><a href='#home'>Careers</a></p>
-          <p><a href='#about'>Suport</a></p>
-          <p><a href='#contact'>Privacy Policy</a></p>
+          <p><Link to="/contact">Careers</Link></p>
+          <p><Link to='/contact'>Suport</Link></p>
+          <p><a href='#private'>Privacy Policy</a></p>
         </div>
       </div>
 
