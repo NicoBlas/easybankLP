@@ -3,15 +3,15 @@ import svgLogo from "../../assets/logo.svg"
 import RequestInvite from '../button/RequestInvite'
 import "./navbar.css"
 import { RiMenu3Line,  RiCloseLin, RiCloseLine} from "react-icons/ri"
-
+import {Link} from "react-router-dom"
 
 
 const Menu = () => {
   return (
     <>
-    <p><a href='#home'>Home</a></p>
+    <p><Link to='/'>Home</Link></p>
     <p><a href='#about'>About</a></p>
-    <p><a href='#contact'>Contact</a></p>
+    <p><Link to='/contact'>Contact</Link></p>
     <p><a href='#blog'>Blog</a></p>
     <p><a href='#careers'>Careers</a></p>
     </>

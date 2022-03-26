@@ -1,7 +1,9 @@
 
 import './App.css';
-import {Navbar, Footer, Header} from "./components/allComponents"
+import {Navbar, Footer, Header, FormContact} from "./components/allComponents"
 import {FeaturesList, ArticlesList} from "./containers/allContainers"
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
+import Home from "./pages/Home"
 
 
 
@@ -12,13 +14,17 @@ function App() {
     
     <div className="App">
         <Navbar />
-        <Header />
-        <FeaturesList />
-        <ArticlesList />
-        <Footer />
-
+        <Routes>
+          <Route path='/' element={<Home />} />  
+          <Route path='/contact' element={<FormContact />}/>
+        </Routes>
+      
     </div>
   );
 }
 
 export default App;
+
+
+
+
